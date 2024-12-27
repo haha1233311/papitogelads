@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hacked!</title>
+    <title>We Found Your Location!</title>
     <style>
         body {
             background: black;
-            color: green;
-            font-family: monospace;
+            color: red;
+            font-family: Arial, sans-serif;
             text-align: center;
-            margin-top: 20%;
+            margin-top: 5%;
             font-size: 20px;
         }
-        #warning {
+        img {
+            width: 50%;
+            border: 5px solid red;
+            margin-top: 20px;
+        }
+        .blink {
             animation: blink 1s infinite;
         }
         @keyframes blink {
@@ -24,21 +29,9 @@
     </style>
 </head>
 <body>
-    <h1 id="warning">YOU HAVE BEEN HACKED!</h1>
-    <p>Initiating data wipe...</p>
-    <p id="progress"></p>
-
-    <script>
-        let progress = 0;
-        const progressText = document.getElementById('progress');
-        setInterval(() => {
-            if (progress < 100) {
-                progress += 1;
-                progressText.textContent = `Progress: ${progress}%`;
-            } else {
-                progressText.textContent = 'System compromised. Please contact admin.';
-            }
-        }, 100);
-    </script>
+    <h1 class="blink">We Found Your Location!</h1>
+    <p>We will meet soon, fuck scam!</p>
+    <img src="https://files.fm/u/zths9sxm3z" alt="Location Map">
+    <p>Your Location: Nga Son district, Thanh Hoa province, Vietnam</p>
 </body>
 </html>
