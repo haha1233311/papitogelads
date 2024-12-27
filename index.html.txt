@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacked!</title>
+    <style>
+        body {
+            background: black;
+            color: green;
+            font-family: monospace;
+            text-align: center;
+            margin-top: 20%;
+            font-size: 20px;
+        }
+        #warning {
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="warning">YOU HAVE BEEN HACKED!</h1>
+    <p>Initiating data wipe...</p>
+    <p id="progress"></p>
+
+    <script>
+        let progress = 0;
+        const progressText = document.getElementById('progress');
+        setInterval(() => {
+            if (progress < 100) {
+                progress += 1;
+                progressText.textContent = `Progress: ${progress}%`;
+            } else {
+                progressText.textContent = 'System compromised. Please contact admin.';
+            }
+        }, 100);
+    </script>
+</body>
+</html>
