@@ -1,2 +1,2 @@
 # papitogelads
-papitogel tiktok ads 
+FUCK YOU SCAM
